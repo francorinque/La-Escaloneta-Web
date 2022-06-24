@@ -1,0 +1,224 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+:root{
+	--celeste:  #4C84B4;
+	--negro: #0B090A;
+	--gris: #343A40;
+	--blanco:  #f4f4f4;
+}
+
+body{
+	width: 100%;
+  background: var(--negro);
+}
+
+/*ESTILO GENERALES */
+
+.section-container{
+	background-color: var(--blanco);
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-title{
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+
+.section-p{
+  color: var(--gris);
+  font-size: 18px;
+}
+
+
+/* ESTILOS   */
+
+.header{
+ justify-content: space-between;
+  padding: 0px 2rem;
+  height: 100px;
+}
+
+.header_logo{
+  width: 50px;
+}
+
+
+/* NAV  */
+
+
+
+.main_nav{
+	width: 90%;
+	display:  flex;
+	justify-content: flex-end;
+}
+
+.nav_menu{
+	width: 90%;
+	display:  flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 5rem;
+}
+
+.menu_items{
+	font-size: 1.4rem;
+	font-weight: 600;
+	color: var(--negro);
+}
+
+
+.menu_items:nth-of-type(3),
+.menu_items:nth-of-type(4)
+{
+	/*border-bottom: 2px solid var(--celeste);*/
+	padding: 5px 20px;
+	border-radius: 20px;
+	box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset,
+	rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.nav_label{
+	font-size: 1.5rem;
+	display:  none;
+}
+
+
+/*MEDIA MENU */
+
+@media (max-width:  820px){
+
+	.header{
+		z-index: 999;
+		position: fixed	;
+		top:  0;
+		width: 100%;
+		left: 0;
+	}
+
+.header_logo{
+  width: 45px;
+}
+
+
+/* NAV  */
+
+
+
+.main_nav{
+	width: 90%;
+	display:  flex;
+	justify-content: flex-end;
+}
+
+.nav_menu{
+	z-index: 999;
+	flex-direction: column;
+	justify-content: space-evenly;
+	gap: 2rem;
+	position:  fixed;
+	left: 0;
+	width: 100%;
+	height: calc(100vh - 100px);
+	top:  100px;
+	background-color: var(--blanco);
+	padding-bottom: 2rem;
+	display: none;
+}
+
+
+.nav_label{
+	font-size: 1.7rem;
+	display:  block;
+	color: var(--celeste);
+}
+
+#toggle:checked ~ .nav_menu{
+	display: flex;
+}
+
+
+}
+
+
+/*HERO */
+
+.hero{
+	padding: 70px 0;
+	flex-direction: column;
+	gap:  .5rem;
+}
+
+.hero_texts{
+	display:  flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	gap: .5rem;
+	height: 250px;
+}
+.hero_texts,
+.hero_picture{
+	width: max(80%,250px);
+}
+
+.hero_picture{
+	height: 250px;
+	background-image: url('Escaloni.jpg');
+	background-size: cover;
+	background-position: center center;
+	box-shadow: 1px 1px 2px 0px rgba(0,0,0,.2);
+	border-radius: 5px;
+}
+
+
+
+.hero .text-celeste{
+	color: var(--celeste);
+}
+
+
+@media (min-width: 664px){
+
+
+.hero_texts,
+.hero_picture{
+	width: 60%;
+}
+
+
+}
+
+
+@media (min-width: 946px){
+
+	
+.hero{
+	flex-direction: row;
+	justify-content: space-around;
+	padding: 90px 0;
+}
+
+
+.hero_texts,
+.hero_picture{
+	width: 450px;
+}
+
+
+}
