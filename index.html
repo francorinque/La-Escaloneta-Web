@@ -1,54 +1,117 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="Assets/estilos.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-	<title>La Escaloneta - Rinque</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Assets/estilos.css">
+  <title>La Escaloneta - Rinque</title>
 </head>
 <body>
-	
-
-
-<header class="header section-container">
   
-  <img src="Assets/escudo-argentina.png"  class="header_logo">
+<div class="container container-nav">
+<nav class="section  nav">
+  <div class="nav_logo">
+    <img src="Assets/escudo-argentina.png" alt="logo argentina">
+  </div>
 
-  	<nav class="main_nav">
-  		<input type="checkbox" name="toggle" id="toggle" hidden>
-  		<label class="nav_label" for="toggle">
-  			<i class="fa-solid fa-bars"></i>
-  		</label>
+  <label for="toggle" class="nav_label">
+    <div></div>
+    <div></div>
+    <div></div>
+  </label>
+  <input type="checkbox" name="toggle" id="toggle" hidden>
 
-  		<div class="nav_menu">
-  			<a href="#" class="menu_items">Inicio</a>
-  			<a href="#" class="menu_items">Fixture</a>
-  			<a href="#" class="menu_items">Log In</a>
-  			<a href="#" class="menu_items">Sign In</a>
+  <ul class="nav_list">
+    <li><a href="#hero" class="list_items">INICIO</a></li>
+    <li><a href="#galery" class="list_items">FOTOS</a></li>
+    <li><a href="#sobre" class="list_items">SOBRE</a></li>
+    <li><a href="log-in.html" class="list_items link-celeste">LOG IN</a></li>
+    <li><a href="sign-in.html" class="list_items link-celeste">SIGN IN</a></li>
+  </ul>
+</nav>
 
-  		</div>
-  	</nav>
-</header>
+</div>
+<main>
+  <div class="container container-hero">
+    <section class="section hero" id="hero">
+     <div class="hero_texts">
+      <h1 class="section-title">LA ESCALONETA</h1>
+      <p class="section-p">
+        Se viene el Mundial. Subite a la Escaloneta dale.
+      </p>
+      <a href="#fixture" class="btn hero_btn">Ver Fixture</a>
+     </div>
+    </section>
+  </div>
 
- <main>
- 		
- 		<section class="section-container hero">
- 				
- 				<div class="hero_texts">
- 					<h1 class="section-title"><span class="text-celeste">LA ESCALONETA</span></h1>
- 					<p class="section-p">Subite a la Escaloneta, ¿Qué estás esperando? dale, que se viene el <span class="text-celeste">Mundial</span>.</p>
- 				</div>
- 				<div class="hero_picture">
- 					<span class="picture_img"></span>
- 				</div>
- 		</section>
- </main>
+  <!-- FIXTURE  -->
 
- 
+  <div class="container container-fixture">
+    <section class="section fixture" id="fixture">
+      <div class="fixture_texts">
+        <h2 class="section title">MIRÁ EL FIXTURE</h2>
+      </div>
 
+      <div class="fixture_container-cards">
+      
+        <div class="fixture_card card-1">
+          <div class="card_header">
+            <div class="banderas bandera-argentina"></div>
+            <span>VS</span>
+            <div class="banderas bandera-arabia"></div>
+          </div>
 
+          <div class="fixture_card-info">
+            <p class="section-p">
+              GRUPO C - JORNADA 1 DE 3
+            </p>
+            <p class="section-p">
+              Se enfrentan el 22/11/2022
+              a las 07:00 hora Argentina.
+            </p>
+          </div>
+        </div>
 
+        <div class="fixture_card card-2">
+          <div class="card_header">
+            <div class="banderas bandera-argentina"></div>
+            <span>VS</span>
+            <div class="banderas bandera-mexico"></div>
+          </div>
 
+          <div class="fixture_card-info">
+            <p class="section-p">
+              GRUPO C - JORNADA 2 DE 3
+            </p>
+            <p class="section-p">
+              Se enfrentan el 26/11/2022
+              a las 16:00 hora Argentina.
+            </p>
+          </div>
+        </div>
+
+        <div class="fixture_card">
+          <div class="card_header">
+            <div class="banderas bandera-polonia"></div>
+            <span>VS</span>
+            <div class="banderas bandera-argentina"></div>
+          </div>
+
+          <div class="fixture_card-info">
+            <p class="section-p">
+              GRUPO C - JORNADA 3 DE 3
+            </p>
+            <p class="section-p">
+              Se enfrentan el 30/11/2022
+              a las 16:00 hora Argentina.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+  
 </body>
 </html>
