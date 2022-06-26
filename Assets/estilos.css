@@ -1,12 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap');
 
-*{
+
+/* ESTILOS GENERALES  */
+*,
+*::before,
+*::after{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
-  font-family: 'Montserrat', sans-serif;
 }
 
 html{
@@ -18,14 +21,22 @@ html{
   --color-primario: #75aee0 ;
   --color-terciario: #0e0e0e ;
   --color-secundario: #f5f5f5 ;
-  --gris: #1d1d1d;
+  --gris: hsl(0, 0%, 50%);
+  --fz-mobile: 1.5rem;
+  --fz-tablets: 2rem;
 }
 
 html,body{
   width: 100%;
+  font-family: 'Poppins', sans-serif;
+
 }
 
-/* ESTILO GENERAL  */
+img{
+  display: block;
+}
+
+
 .container{
   background-color: var(--color-terciario);
 }
@@ -53,7 +64,7 @@ html,body{
 .section-p{
   font-size: 17px;
   color: var(--gris);
-  font-weight: 400;
+  font-weight: 500;
 }
 
 
@@ -64,6 +75,7 @@ html,body{
   top:0;
   left:0;
   width: 100%;
+  z-index: 99;
 }
 
 .nav{
@@ -98,29 +110,31 @@ html,body{
   top: 70px;
   left:-200%;
   width: 100%;
+  height: calc(100vh - 70px);
   background-color: var(--color-secundario);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
   transition: left ease .4s;
-  padding: 50px 0;
   box-shadow: 1px 17px 20px -11px rgba(0,0,0,0.1);
 }
 
-.nav_list .list_items{
-  padding: 20px 0px;
-  display: block;
+.nav_list a{
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--color-terciario);
+  letter-spacing: 3px;
 }
-.list_items.link-celeste{
-  border: 2px solid var(--color-primario);
-  display: inline-block;
-  padding: 5px 0;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-radius: 30px;
-  margin: 5px 0px 10px 0px;
+
+.btn-primario,
+.btn-secundario{
+  border-bottom: 2px solid var(--color-primario);
+  border-radius: 20px;
+  padding: 5px 15px;
 }
+
 
 #toggle:checked ~ .nav_list{
   left:0;
@@ -159,20 +173,24 @@ html,body{
   max-width: 800px;
 }
 
-.hero .section-title,
-.hero .section-p{
+.hero .section-title{
   color: var(--color-secundario);
+}
+
+.btn.hero_btn{
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 900;
 }
 
 /****FIXTURE  */
 
 .fixture{
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 70px 0;
+  padding: 70px 40px;
   gap: 40px;
 }
 
@@ -184,18 +202,21 @@ html,body{
 
 .fixture_texts h2{
   color: var(--color-primario);
+  font-weight: 900;
 }
-
+/* CONTENEDOR CARDS  */
 .fixture_container-cards{
   display: grid;
-  grid-template-columns: repeat(1,80%);
-  grid-template-rows:250px;
+  grid-template-columns: repeat(auto-fit, minmax(15rem,1fr));
+  grid-template-rows: auto;
   place-content: center;
-  row-gap: 40px;
+  gap: 2rem;
+  width: 100%;
+  justify-content: space-between;
 }
 
 
-
+/* CARDS  */
 .fixture_card{
   border-radius: 5px;
   display: grid;
@@ -210,11 +231,16 @@ html,body{
 .card_header{
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .card_header span{
   font-size: 20px;
+  font-weight: 600;
+}
+
+.card_title{
+  font-size: 16px;
   font-weight: 600;
 }
 
@@ -225,6 +251,7 @@ html,body{
   width: 50px;
   height: 50px;
   object-fit: cover;
+  border-radius: 5px;
 }
 
 .banderas.bandera-arabia{
@@ -250,6 +277,33 @@ html,body{
   text-align: center;
   padding: 0 10px;
 }
+
+
+.text-celeste{
+  color: var(--color-primario);
+  font-weight: 600;
+}
+
+/*****GALERY SECTION  */
+
+.galeria-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(15rem,1fr));
+  padding: 100px 30px;
+  gap: .5rem
+}
+
+.galeria__img{
+  aspect-ratio: 0.5;
+  object-fit: cover;
+  width: 100%;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+
+
 
 
 /**** MEDIA QUERY TABLETS  */
@@ -282,35 +336,18 @@ html,body{
   .nav_list{
     position: static;
     width: 100%;
+    height: 100%;
     background-color: transparent;
     text-align: center;
     transition:none;
-    display:flex;
+    flex-direction: row;
     align-items: center;
     justify-content: flex-end;
     gap: 3rem;
   
   }
   
-  .nav_list .list_items{
-    padding: 20px 0px;
-    display: inline-block;
-    font-size: 1.3rem;
-  }
-  .list_items.link-celeste{
-    display: block;
-    padding: 5px 20px;
-    border-radius: 30px;
-    margin: 0;
-    transition: ease .4s;
 
-  }
-
-  .list_items.link-celeste:hover{
-    background-color: var(--color-primario);
-    transition: ease .4s;
-    color: var(--color-secundario);
-  }
   
   #toggle:checked ~ .nav_list{
     transition:none;
@@ -321,17 +358,15 @@ html,body{
   /***** HERO */
 
   .hero .section-title{
-    font-size: 3rem;
+    font-size: var(--fz-tablets);
   }
 
   .hero .section-p{
-    font-size: 2rem;
+    font-size: 20px;
   }
 
-  .btn.hero_btn{
-    padding: 10px 30px;
-    font-size: 1.3rem;
-  }
+  
+ 
   
 }
 
@@ -340,8 +375,55 @@ html,body{
 
 @media (min-width: 1200px){
 
+
+
+.hero{
+  width: 100%;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background: linear-gradient(
+    rgb(0 0 0 /70%),
+    rgb(0 0 0 /90%)),
+    url('argentin-fondocards.png');
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.hero_texts{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  width: 90%;
+  max-width: 800px;
+  transform: translateX(-500%);
+  animation: animacionFade ease 1000ms forwards;
+}
+
+@keyframes animacionFade{
+
+  0%{
+    opacity: 0;
+  }
+
+  50%{
+
+    opacity: 0.2;
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .fixture_texts h2{
-  font-size: 2rem;
+  font-size: var(--fz-tablets);
 }
   
 .fixture_container-cards{
@@ -356,6 +438,18 @@ html,body{
   grid-template-columns: repeat(1,1fr);
   grid-template-rows: 125px auto;
   overflow: hidden;
+  transition:  ease .4s;
+}
+
+.fixture_card:hover{
+  transform: scale(1.1);
+  transition:  ease .4s;
+  cursor: pointer;
+  background-color: var(--color-terciario);
+}
+
+.fixture_card:hover > *{
+  color: var(--color-secundario);
 }
 
 
