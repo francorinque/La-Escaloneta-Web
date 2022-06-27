@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="Assets/estilos.css">
   <link href='https://css.gg/clipboard.css' rel='stylesheet'>
+  <link rel="stylesheet" href="Css/estilos.css">
   <title>La Escaloneta - Rinque</title>
 </head>
 <body>
@@ -16,19 +16,12 @@
     <img src="Assets/escudo-argentina.png" alt="logo argentina">
   </div>
 
-  <label for="toggle" class="nav_label">
-    <div></div>
-    <div></div>
-    <div></div>
-  </label>
-  <input type="checkbox" name="toggle" id="toggle" hidden>
-
   <ul class="nav_list">
     <li><a href="#hero" class="list_items">INICIO</a></li>
     <li><a href="#galery" class="list_items">WALLPAPERS</a></li>
-  
-    <li><a href="#sobre" class="list_items">CONTACT</a></li>
+    <li><a href="#contact" class="list_items">CONTACT</a></li>
   </ul>
+  
   
   <div class="nav_ctas">
     <li><a href="log-in.html" class=" btn-primario">LOG IN</a></li>
@@ -36,11 +29,18 @@
   </div>
 
   
+  <input type="checkbox" name="toggle" id="toggle" hidden>
+  <label for="toggle" class="nav_label">
+    <img src="Assets/toggle.svg" class="menuopen">
+    <img src="Assets/menuClose.svg" class="menuclose">
+  </label>
+  <!-- MENU MOBILE  -->
   <div class="nav-mobile">
+    
     <ul class="mobile-nav_list">
       <li><a href="#hero" class="list_items">INICIO</a></li>
       <li><a href="#galery" class="list_items">WALLPAPERS</a></li>
-      <li><a href="#" class="list_items">CONTACT</a></li>
+      <li><a href="#contact" class="list_items">CONTACT</a></li>
     </ul>
     <div class="mobile-nav_ctas">
       <li><a href="log-in.html" class=" btn-primario">LOG IN</a></li>
@@ -75,7 +75,7 @@
 
       <div class="fixture_container-cards">
       
-        <div class="fixture_card card-1">
+        <article class="fixture_card card-1">
           <div class="card_header">
             <div class="banderas bandera-argentina"></div>
             <span>VS</span>
@@ -91,9 +91,9 @@
               a las <span class="text-celeste">07:00</span> hora Argentina.
             </p>
           </div>
-        </div>
+        </article>
 
-        <div class="fixture_card card-2">
+        <article class="fixture_card card-2">
           <div class="card_header">
             <div class="banderas bandera-argentina"></div>
             <span>VS</span>
@@ -109,9 +109,9 @@
               a las <span class="text-celeste">16:00</span> hora Argentina.
             </p>
           </div>
-        </div>
+        </article>
 
-        <div class="fixture_card">
+        <article class="fixture_card card-3">
           <div class="card_header">
             <div class="banderas bandera-polonia"></div>
             <span>VS</span>
@@ -127,7 +127,7 @@
               a las <span class="text-celeste">16:00</span> hora Argentina.
             </p>
           </div>
-        </div>
+        </article>
       </div>
     </section>
   </div>
@@ -143,6 +143,32 @@
   </div>
 
   <!-- CONTACTO  -->
+  <div class="container">
+    <section class="section" id="contact">
+        <h2 class="section-title">SI QUERÉS CONTACTARME</h2>
+        <!-- CARDS  -->
+       <div class="contact_container-cards">
+        <div class="contact_card">
+          <a href="https://www.linkedin.com/in/franco-agustin-rinque"><img src="Assets/Linkedind.svg" class="contact_card-img"></a>
+          <p>Acá subo algunos proyectos y podes hablarme.</p>
+          <a href="https://www.linkedin.com/in/franco-agustin-rinque" class="card_cta" target="_blank">IR <img src="Assets/Arrow.svg" alt="flecha icono"></a>
+         </div>
+         <!-- CARD 2 -->
+         <div class="contact_card">
+          <a href="https://www.instagram.com/codigofar/"><img src="Assets/Instagram.svg" class="contact_card-img"></a>
+          <p>Podés hablarme por acá también.</p>
+          <a href="https://www.instagram.com/codigofar/" class="card_cta" target="_blank">IR <img src="Assets/Arrow.svg" alt="flecha icono"></a>
+         </div>
+         <!-- CARD 3 -->
+         <div class="contact_card">
+           <a href="mailto:francoagustinrinquecorreo@gmail.com"><img src="Assets/Gmail.svg" class="contact_card-img"></a>
+           <p>Enviame un correo</p>
+           <a href="mailto:francoagustinrinquecorreo@gmail.com" class="card_cta" target="_blank">IR <img src="Assets/Arrow.svg" alt="flecha icono"></a>
+          </div>
+       </div>
+
+    </section>
+  </div>
 </main>
   
 </body>

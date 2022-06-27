@@ -11,7 +11,7 @@
   list-style: none;
   text-decoration: none;
 }
-
+     
 
 
 html{
@@ -67,7 +67,7 @@ img{
 
 .section-p{
   font-size: 17px;
-  color: #e7e6e6;
+  color: var(--color-terciario);
   font-weight: 500;
 }
 
@@ -106,13 +106,8 @@ img{
 }
 
 /* ICONO LABEL  */
-.nav_label > div{
-  width: 30px;
-  height: 4px;
-  background: var(--color-primario);
-  margin: 5px 0;
-  border-radius: 4px;
-}
+
+
 
 .nav_list{
   display: none;
@@ -133,10 +128,6 @@ img{
   padding: 5px 15px;
 }
 
-
-
-
-
   /* MENU MOBILE  */
 
   .nav-mobile{
@@ -152,18 +143,38 @@ img{
     align-items: center;
     background-color: var(--color-terciario);
   }
+  
+  label.nav_label img {
+    width: 40px;
+  }
+
 
   #toggle:checked ~ .nav-mobile{
     display: flex;
-   transition: left ease .4s;
- }
+    transition: left ease .4s;
+  }
 
- .mobile-nav_list{
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-  align-items: center;
- }
+  #toggle:checked ~ label.nav_label .menuclose{
+    display: block;
+  }
+
+  #toggle:checked ~ label.nav_label .menuopen{
+    display: none;
+  }
+
+  label.nav_label .menuclose{
+  display: none;
+  }
+
+
+
+
+  .mobile-nav_list{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+  }
 
  .mobile-nav_list a,
  .mobile-nav_ctas a{
@@ -191,7 +202,7 @@ img{
   background: linear-gradient(
     rgb(0 0 0 /70%),
     rgb(0 0 0 /90%)),
-    url('argentin-fondocards.png');
+    url('../Assets/argentin-fondocards.png');
     background-size: cover;
     background-position: center center;
     display: flex;
@@ -212,6 +223,10 @@ img{
 }
 
 .hero .section-title{
+  color: var(--color-secundario);
+}
+
+.hero_texts p{
   color: var(--color-secundario);
 }
 
@@ -250,7 +265,7 @@ i.gg-clipboard{
 }
 
 .fixture_texts h2{
-  color: var(--color-primario);
+  color: var(--color-secundario);
   font-weight: 900;
 }
 /* CONTENEDOR CARDS  */
@@ -295,7 +310,7 @@ i.gg-clipboard{
 }
 
 .banderas{
-  background-image: url('Argentina-bandera.png');
+  background-image: url('../Assets/Argentina-bandera.png');
   background-size: cover;
   background-position: center;
   width: 50px;
@@ -305,16 +320,16 @@ i.gg-clipboard{
 }
 
 .banderas.bandera-arabia{
-  background-image: url('Arabia-bandera.png');
+  background-image: url('../Assets/Arabia-bandera.png');
 }
 
 .banderas.bandera-mexico{
-  background-image: url('Mexico-bandera.jpg');
+  background-image: url('../Assets/Mexico-bandera.jpg');
 }
 
 
 .banderas.bandera-polonia{
-  background-image: url('Polonia-bandera.jpg');
+  background-image: url('../Assets/Polonia-bandera.jpg');
 }
 
 
@@ -352,8 +367,70 @@ i.gg-clipboard{
   border-radius: 3px;
 }
 
+/******* CONTACT  */
+
+#contact{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 70px 0;
+  gap: 40px;
+}
+
+#contact h2,
+#contact p{
+  color: var(--color-secundario);
+}
+
+#contact h2{
+  width: 80%;
+}
 
 
+.contact_container-cards{
+  displaY: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem,1fr));
+  grid-auto-rows: 200px;
+  gap: 20px;
+  width: 100%;
+  padding: 0px 40px;
+}
+
+.contact_card{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 20px;
+  border-radius: 5px;
+  text-align: start;
+  border-top: 4px solid var(--color-secundario);
+}
+
+  
+
+.contact_card img{
+  width: 60px;
+}
+
+
+
+.card_cta{
+  color: var(--color-secundario);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-weight: 600;
+}
+
+
+.card_cta img{
+  width: 22px;
+}
 
 
 /**** MEDIA QUERY TABLETS  */
@@ -379,9 +456,9 @@ i.gg-clipboard{
   }
   
   /* ICONO LABEL  */
-  .nav_label > div{
-    display: none;
-  }
+    label{
+      display: none;
+    }
   
   .nav_list{
     position: static;
@@ -432,27 +509,20 @@ i.gg-clipboard{
   
 }
 
-
 /***** LAPTOP */
 
 @media (min-width: 1200px){
 
 
- 
-
 .hero{
   width: 100%;
   padding-top: 200px;
   padding-bottom: 200px;
-  background: linear-gradient(
-    rgb(0 0 0 /70%),
-    rgb(0 0 0 /90%)),
-    url('argentin-fondocards.png');
-    background-size: cover;
-    background-position: center center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
 }
 
@@ -526,9 +596,17 @@ i.gg-clipboard{
   cursor: pointer;
 }
 
+/*** CONTACT  */
 
 
+.card_cta{
+  transition: ease .3s;
+}
 
+.card_cta:hover{
+  transform: translateX(5px);
+  transition: ease .3s;
+}
 
 
 
