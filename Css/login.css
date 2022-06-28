@@ -1,0 +1,172 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap');
+
+
+/* ESTILOS GENERALES  */
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root{
+    --color-primario: #75aee0 ;
+    --color-terciario: #0e0e0e ;
+    --color-secundario: #f5f5f5 ;
+    --gris: hsl(0, 0%, 50%);
+    --fz-mobile: 1.5rem;
+    --fz-tablets: 2rem;
+  }
+  
+  html,body{
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+
+.form-container{
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(
+    rgb(0 0 0 / 90%),
+    rgb(0 0 0 / 90%)
+  ),
+  url('../Assets/argentin-fondocards.png');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: grid;
+  place-items: center;
+}
+
+/* FORMULARIO */
+.form{
+  background-color: rgb(118 174 224 /60%);
+  width: min(90%, 400px);
+  padding: 20px 0;
+  min-height: 350px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+  /* TITULO */
+.form__title{
+  font-size: clamp(2rem,4vw,3rem);
+  letter-spacing: 2px;
+  color: var(--color-secundario);
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+
+
+/* CONTENEDOR DE LOS INPUTS  */
+.container-inputs img{
+  width: 25px;
+}
+.container-inputs{
+  width: 90%;
+  display: flex;
+  gap: 5px;
+  background-color: #fff;
+  padding: 10px 5px;
+  border-radius: 5px;
+}
+
+
+/* INPUT  */
+.input{
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  color: var(--color-primario);
+  font-weight: 600;
+}
+
+/* BOTON  */
+.form__btn{
+  color: var(--color-primario);
+  font-weight: 900;
+  letter-spacing: 1px;
+  outline: none;
+  border:none;
+  width: 90%;
+  font-size: 17px;
+  padding: 10px 0;
+  background-color: var(--color-secundario);
+  border-radius: 5px;
+}
+
+
+/* SPAN, FONDO  */
+.form .form__arg{
+  position: absolute;
+  font-size: 9rem;
+  font-weight: 900;
+  color: var(--color-terciario);
+  top: -4rem;
+  right: 2px;
+  opacity: 7%;
+}
+
+
+.form__opciones{
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: max-content;
+  gap: 20px;
+}
+
+.title__opciones{
+  color: var(--color-secundario);
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.form__opciones a{
+  color: var(--color-secundario);
+  background-color: #0e0e0e;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  font-weight: 900;
+  border-bottom: 2px solid var(--color-secundario);
+}
+
+.form__opciones a:nth-child(1){
+  background-color: #3b5998;
+}
+
+.form__opciones a:nth-child(2){
+  background-color: #ea4335;
+}
+
+.form__opciones a:nth-child(3){
+  background-color: #55acee;
+}
+
+
+@media (min-width: 992px){
+
+  .form__opciones a:focus{
+    border: none;
+  }
+  .form__opciones a:hover{
+    filter: opacity(70%);
+  }
+
+}

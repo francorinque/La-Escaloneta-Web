@@ -31,7 +31,6 @@ html{
 html,body{
   width: 100%;
   font-family: 'Poppins', sans-serif;
-
 }
 
 img{
@@ -63,6 +62,7 @@ img{
 .section-title{
   font-size: 1.7rem;
   font-weight: 900;
+  letter-spacing: 5px;
 }
 
 .section-p{
@@ -379,12 +379,12 @@ i.gg-clipboard{
   gap: 40px;
 }
 
-#contact h2,
 #contact p{
-  color: var(--color-secundario);
+  color: #bcbcbc;
 }
 
 #contact h2{
+  color: var(--color-secundario);
   width: 80%;
 }
 
@@ -404,10 +404,11 @@ i.gg-clipboard{
   align-items: flex-start;
   justify-content: center;
   gap: 10px;
-  padding: 0 20px;
+  padding: 0 30px;
   border-radius: 5px;
   text-align: start;
-  border-top: 4px solid var(--color-secundario);
+  border-top: 1px solid var(--color-secundario);
+  border-left: 1px solid var(--color-secundario);
 }
 
   
@@ -513,6 +514,9 @@ i.gg-clipboard{
 
 @media (min-width: 1200px){
 
+.nav_list{
+  gap: 50px;
+}
 
 .hero{
   width: 100%;
