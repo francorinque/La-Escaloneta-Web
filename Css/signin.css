@@ -35,7 +35,7 @@
     #000000ae,
     #000000ad
   ),
-  url('../Assets/argentin-fondocards.png');
+  url('../Assets/seleccion-fondo-optimizada.png');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -47,8 +47,9 @@
 }
 
 .form-container img{
-  width: 80px;
+  width: 60px;
 }
+
 
 /* FORMULARIO */
 .form{
@@ -60,7 +61,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
   align-items: center;
   position: relative;
   overflow: hidden;
@@ -70,11 +71,12 @@
 
   /* TITULO */
 .form__title{
-  font-size: clamp(2rem,4vw,2.4rem);
+  font-size: clamp(1.7rem,4vw,2.4rem);
   letter-spacing: 2px;
   color: var(--color-secundario);
   font-weight: 700;
   margin-bottom: 30px;
+  text-transform: uppercase;
 }
 
 
@@ -167,4 +169,23 @@ button{
     cursor: pointer;
     transition: .4s ease-in-out;
   }
+}
+
+
+.form__footer{
+  display: flex;
+  width: 100%;
+  color: var(--color-primario);
+  color: var(--gris);
+  gap: 10px;
+  justify-content: center;
+}
+
+.form__footer a{
+  color: var(--gris);
+  text-decoration: underline;
+}
+
+.form__footer a:visited{
+  color: hsl(279, 38%, 31%);
 }
