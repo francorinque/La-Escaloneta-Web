@@ -10,33 +10,28 @@
 <body>
   
 <section class="form-container">
+  <img src="Assets/escudo-argentina.png" alt="">
   <form class="form">
-    <h2 class="form__title">LOG IN</h2>
+    <h2 class="form__title">Iniciar Sesión</h2>
     <!-- INPUTS  -->
-    <div class="container-inputs">
-      <img src="Assets/person.svg" alt="persona">
-      <input type="text" class="input" required>
-    </div>
-    <div class="container-inputs">
-      <img src="Assets/lock.svg" alt="candado">
-      <input type="password" class="input" required>
-    </div>
-    <!-- BTN -->
-    <button class="form__btn">ENTRAR</button>
-    <!-- CAJA REDES -->
-    <span class="title__opciones">O entrá con</span>
-    <div class="form__opciones">
-      <a href="#">F</a>
-      <a href="#">G</a>
-      <a href="#">T</a>
+    <div class="grupo">
+      <input type="text" name="nombre" id="nombre" required><span class="barra"></span>
+      <label for="">Nombre</label>
     </div>
 
-    <span class="form__arg">ARG</span>
+    <div class="grupo">
+      <input type="password" name="password" id="password" required><span class="barra"></span>
+      <label for="">Contraseña *</label>
+    </div>
+    <!-- BOTON  -->
+    <button type="submit">ENTRAR</button>
   </form>
 </section>
+
+    
     
 
 
-<!-- <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script> -->
+
 </body>
 </html>
