@@ -42,6 +42,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .form-container img{
@@ -77,6 +78,15 @@
   margin-bottom: 30px;
 }
 
+.btn-back{
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.btn-back img {
+  width: 30px;
+}
 
 
 /* CONTENEDOR DE LOS INPUTS  */
@@ -160,6 +170,31 @@ button{
 }
 
 
+.form__footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-secundario);
+  opacity: 50%;
+  font-size: 14px;
+}
+
+.form__footer a{
+  color: var(--gris);
+  text-decoration: underline;
+}
+
+.form__footer a:visited,
+.btn-password > a{
+  color: hsl(279, 38%, 31%);
+}
+
+.btn-password{
+  font-size: 14px;
+  margin-top: 5px;
+}
+
 
 @media (min-width: 992px){
   button{
@@ -170,24 +205,10 @@ button{
     cursor: pointer;
     transition: .4s ease-in-out;
   }
+  .form__footer{
+    flex-direction: row;
+    gap: 10px;
+  }
 }
 
-
-.form__footer{
-  display: flex;
-  width: 100%;
-  color: var(--color-primario);
-  color: var(--gris);
-  gap: 10px;
-  justify-content: center;
-}
-
-.form__footer a{
-  color: var(--gris);
-  text-decoration: underline;
-}
-
-.form__footer a:visited{
-  color: hsl(279, 38%, 31%);
-}
 
