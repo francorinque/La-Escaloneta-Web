@@ -524,14 +524,12 @@ i.gg-clipboard{
   border-radius: 50%;
 }
 
-
-
-
-
-/**** MEDIA QUERY TABLETS  */
-@media(min-width: 992px){
-
-  
+@media(min-width: 768px){
+    /* ICONO LABEL  */
+    label{
+      display: none;
+    }
+     
   .nav{
     display: flex;
     height: 100px;
@@ -550,10 +548,6 @@ i.gg-clipboard{
     height: 70%;
   }
   
-  /* ICONO LABEL  */
-    label{
-      display: none;
-    }
   
   .nav_list{
     position: static;
@@ -583,6 +577,14 @@ i.gg-clipboard{
    color: var(--color-primario);
    font-weight: 600;
   }
+}
+
+
+
+/**** MEDIA LAPTOPS  */
+@media(min-width: 992px){
+
+ 
 
   /* TERMINA NAV  */
 
